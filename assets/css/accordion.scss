@@ -1,0 +1,88 @@
+.accordion {
+  &__item {
+    margin-bottom: 1.2rem;
+  }
+  &__button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8rem 3.5rem;
+    font: 1.8rem $chivo;
+    color: $green;
+    background-color: transparent;
+    border: 1px solid $green;
+    border-radius: 30px 30px 30px 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    &__icon {
+      display: block;
+      position: relative;
+      width: 15.5px;
+      height: 2px;
+      background: $green;
+      transition: all 0.3s ease-in-out;
+      &::after {
+        content: '';
+        display: block;
+        width: 15.5px;
+        height: 2px;
+        background: $green;
+        transform: rotate(90deg);
+        transition: all 0.3s ease-in-out;
+      }
+      &--active:focus,
+      &--active {
+        background: $white;
+        transform: rotate(0deg);
+        &::after {
+          background: $white;
+          transform: rotate(0deg);
+        }
+      }
+    }
+    &:hover & {
+      &__icon {
+        background: $white;
+        &::after {
+          background: $white;
+        }
+      }
+    }
+    &:focus {
+      outline: none;
+      font-weight: 600;
+    }
+    &--active:focus,
+    &--active,
+    &:hover {
+      color: $white;
+      background-color: $green;
+      font-weight: 600;
+    }
+    &--active {
+      border-radius: 3rem 3rem 0 0;
+    }
+  }
+
+  &__content {
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    background: transparent;
+    padding: 0 3.5rem;
+    border-radius: 0px 0px 30px 30px;
+    p {
+      font: 1.6rem $chivo;
+      line-height: 1.9rem;
+      color: $white;
+      font-weight: 400;
+    }
+    &[aria-hidden='false'] {
+      max-height: 100rem;
+      padding: 1rem 3.5rem 3.5rem;
+      background: $green;
+    }
+  }
+}

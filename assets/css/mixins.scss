@@ -1,0 +1,9 @@
+@mixin modifiers {
+  &__center {
+    display: block;
+    margin: 0 auto;
+  }
+  &__rounded {
+    border-radius: 30px;
+  }
+}

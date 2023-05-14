@@ -1,0 +1,78 @@
+.footer {
+  background: $green;
+  border-radius: 3rem 3rem 0 0;
+  margin-top: 10rem;
+  padding: 3.6rem 3.6rem 2rem 3.6rem;
+  display: flex;
+  justify-content: space-between;
+  @media only screen and (max-width: 800px) {
+    display: block;
+  }
+  h4 {
+    margin-bottom: 4rem;
+    a {
+      font: 3.6rem $asul;
+      font-weight: 200;
+      letter-spacing: -0.05em;
+      color: $white;
+      text-decoration: none;
+    }
+    @media only screen and (max-width: 800px) {
+      font: 3rem $asul;
+      margin-bottom: 2.6rem;
+    }
+  }
+  &__social {
+    display: flex;
+    gap: 2em;
+    @media only screen and (max-width: 800px) {
+      margin-bottom: 3.8rem;
+    }
+    li {
+      a {
+        width: 24px;
+        height: 24px;
+        display: block;
+        background-size: contain;
+        transform: scale(1);
+        transition: all 0.3s ease-in-out;
+        &:hover,
+        &:focus {
+          transform: scale(1.1);
+        }
+      }
+    }
+    &__insta {
+      background: url('assets/img/insta.svg') center center no-repeat;
+    }
+    &__facebook {
+      background: url('assets/img/facebook.svg') center center no-repeat;
+    }
+    &__twitter {
+      background: url('assets/img/twitter.svg') center center no-repeat;
+    }
+  }
+  &__right {
+    display: flex;
+    gap: 15rem;
+    p {
+      font-size: 1.8rem;
+      color: $white;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+      line-height: 3rem;
+    }
+    li {
+      line-height: 3rem;
+      a {
+        font-size: 1.6rem;
+        color: $white;
+        text-decoration: none;
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

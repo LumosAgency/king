@@ -1,0 +1,41 @@
+.intro {
+  padding-top: 4rem;
+  h2 {
+    span {
+      display: none;
+    }
+    @media only screen and (max-width: 1100px) {
+      display: none;
+    }
+  }
+  &__image {
+    margin-top: 6em;
+    @media only screen and (max-width: 1100px) {
+      margin-top: 4em;
+    }
+    @media only screen and (max-width: 800px) {
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &__text {
+    h2 {
+      text-align: left;
+      margin-bottom: 3rem;
+      @media only screen and (max-width: 1100px) {
+        display: inline-block;
+        line-height: 6rem;
+      }
+      span {
+        display: none;
+        @media only screen and (max-width: 1100px) {
+          display: inline-block;
+        }
+      }
+    }
+    p {
+      max-width: 55rem;
+    }
+  }
+}

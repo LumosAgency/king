@@ -1,0 +1,29 @@
+.purfection {
+  margin-top: 10rem;
+  h3 {
+    margin-top: 10rem;
+    @media only screen and (max-width: 1100px) {
+      text-align: left;
+    }
+    span {
+      display: block;
+      @media only screen and (max-width: 1100px) {
+        display: inline-block;
+      }
+      &.left {
+        text-align: left;
+      }
+      &.right {
+        text-align: right;
+        @media only screen and (max-width: 1100px) {
+          text-align: left;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    img {
+      width: 100%;
+    }
+  }
+}

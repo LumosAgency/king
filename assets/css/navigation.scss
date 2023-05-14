@@ -1,0 +1,102 @@
+.navigation {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 0;
+  height: 0;
+  top: 0%;
+  &__wrapper {
+    position: relative;
+    width: 45.55px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  &__list {
+    position: relative;
+    width: 720px;
+    background: $orange;
+    height: 100vh;
+    padding: 6rem 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 20;
+    margin-left: -720px;
+    @media only screen and (max-width: 800px) {
+      width: 330px;
+      margin-left: -330px;
+    }
+  }
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: rgba($black, 0);
+    z-index: 10;
+    transition: background 0.3s ease-in-out;
+  }
+  &__toggle {
+    position: absolute;
+    background: $orange url('assets/img/paw.svg') 5px center no-repeat;
+    background-size: 30px;
+    top: 71px;
+    right: 0px;
+    width: 45.55px;
+    height: 70px;
+    z-index: 200;
+    overflow: hidden;
+    text-indent: -999px;
+    border-radius: 0 15px 15px 0;
+    outline: none;
+  }
+  &[aria-expanded='true'] {
+    .navigation__wrapper {
+      width: 760px;
+      transition: all 0.3s ease-in-out;
+      @media only screen and (max-width: 800px) {
+        width: 370px;
+      }
+    }
+    .navigation__overlay {
+      width: 100%;
+      height: 100%;
+      background: rgba($black, 0.5);
+    }
+    .navigation__list {
+      width: 720px;
+      margin-left: 0;
+      padding: 6rem 6rem;
+      overflow: hidden;
+      @media only screen and (max-width: 800px) {
+        width: 330px;
+        padding: 6em 2.4rem;
+      }
+    }
+  }
+  &__items {
+    width: 720px;
+    overflow: hidden;
+    @media only screen and (max-width: 800px) {
+      width: 330px;
+    }
+  }
+  &__item {
+    a {
+      font: 80px $chivo;
+      font-weight: 200;
+      color: $black;
+      text-decoration: none;
+      &.nuxt-link-exact-active,
+      &:hover,
+      &:focus {
+        font: 80px $asul;
+        @media only screen and (max-width: 800px) {
+          font: 50px $asul;
+        }
+      }
+      @media only screen and (max-width: 800px) {
+        font: 50px $chivo;
+      }
+    }
+  }
+}

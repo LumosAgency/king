@@ -1,0 +1,29 @@
+.hero {
+  background: url('assets/img/hero.jpg') center center no-repeat;
+  background-size: cover;
+  padding: 1rem 0.8em;
+  height: clamp(438px, 50vw, 820px);
+  @media only screen and (max-width: 800px) {
+    padding: 9rem 0.8em;
+    height: 100vh;
+    max-height: 815px;
+    background-size: cover;
+    background: url('assets/img/hero.jpg') 0px -20px no-repeat;
+  }
+  h1 {
+    font-weight: 400;
+    font-size: clamp(9rem, 9rem + 4vw, 17.6rem);
+    line-height: clamp(9rem, 9rem + 4vw, 17.6rem);
+    letter-spacing: -0.05em;
+    word-spacing: -0.05em;
+    color: $orange;
+    text-align: right;
+    @media only screen and (max-width: 1100px) {
+      font-size: clamp(9rem, 9rem + 2vw, 17.6rem);
+      text-align: center;
+    }
+    @media only screen and (max-width: 800px) {
+      line-height: clamp(9rem, 9rem + 2vw, 17.6rem);
+    }
+  }
+}
