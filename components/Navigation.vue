@@ -54,9 +54,13 @@ export default {
         if (this.isNavOpen) {
           nav.setAttribute('aria-expanded', 'true')
           navList.setAttribute('aria-expanded', 'true')
+          navList.removeAttribute('aria-hidden', 'false')
+          nav.classList.add('open')
         } else {
           nav.setAttribute('aria-expanded', 'false')
           navList.setAttribute('aria-expanded', 'false')
+          navList.setAttribute('aria-hidden', 'true')
+          nav.classList.remove('open')
         }
       })
     },
@@ -67,6 +71,9 @@ export default {
       const navList = document.getElementById('navigation__list')
       nav.setAttribute('aria-expanded', 'false')
       navList.setAttribute('aria-expanded', 'false')
+      navList.setAttribute('aria-hidden', 'true')
+      nav.classList.remove('open')
+      this.isNavOpen = false
     },
   },
 }
