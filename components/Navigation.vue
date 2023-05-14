@@ -7,6 +7,7 @@
       </button>
       <nav
         aria-controls="navigation__list"
+        id="navigation__list"
         class="navigation__list"
         :aria-expanded="isNavOpen ? 'true' : 'false'"
         :aria-hidden="!isNavOpen"
@@ -48,10 +49,13 @@ export default {
     toggleNav() {
       this.isNavOpen = !this.isNavOpen
       this.$nextTick(() => {
-        const navList = document.getElementById('navigation')
+        const nav = document.getElementById('navigation')
+        const navList = document.getElementById('navigation__list')
         if (this.isNavOpen) {
+          nav.setAttribute('aria-expanded', 'true')
           navList.setAttribute('aria-expanded', 'true')
         } else {
+          nav.setAttribute('aria-expanded', 'false')
           navList.setAttribute('aria-expanded', 'false')
         }
       })
@@ -59,7 +63,9 @@ export default {
   },
   watch: {
     $route() {
-      const navList = document.getElementById('navigation')
+      const nav = document.getElementById('navigation')
+      const navList = document.getElementById('navigation__list')
+      nav.setAttribute('aria-expanded', 'false')
       navList.setAttribute('aria-expanded', 'false')
     },
   },
