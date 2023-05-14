@@ -35,18 +35,8 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     '@nuxtjs/google-fonts',
-    '@nuxt/image',
   ],
-  buildModules: [
-    // Next Image module https://image.nuxtjs.org/components/nuxt-img
-    [
-      '@nuxt/image',
-      {
-        provider: 'static',
-        dir: 'assets/img',
-      },
-    ],
-  ],
+  buildModules: [],
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {

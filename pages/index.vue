@@ -13,12 +13,10 @@
               xyz="fade down"
               :appear-visible="{ threshold: 0.5, rootMargin: '50px' }"
             >
-              <nuxt-img
-                src="/cat-friends.jpg"
-                format="webp"
-                fit="cover"
-                sizes="sm:432px md:432px lg:432px"
+              <img
+                src="~/assets/img/cat-friends.jpg"
                 class="img__center img__rounded"
+                alt="Picture of cute cats"
               />
             </div>
           </XyzTransition>
@@ -52,12 +50,10 @@
             xyz="fade down"
             :appear-visible="{ threshold: 0.5, rootMargin: '50px' }"
           >
-            <nuxt-img
-              src="/pamper.jpg"
-              format="webp"
-              fit="cover"
-              sizes="sm:432px md:432px lg:666px"
+            <img
+              src="~/assets/img/pamper.jpg"
               class="img__center img__rounded"
+              alt="Photo of cat face"
             />
           </div>
         </XyzTransition>

@@ -14,50 +14,38 @@
     </div>
     <VueSlickCarousel v-bind="slickOptions" ref="carousel">
       <div class="inner-slide">
-        <nuxt-img
-          src="/gallery_img_1.png"
-          format="webp"
-          fit="cover"
+        <img
+          src="~/assets/img/gallery_img_1.png"
           alt="Photo of cats playing in a large space"
         />
       </div>
       <div class="inner-slide">
-        <nuxt-img
-          src="/gallery_img_2.png"
-          format="webp"
-          fit="cover"
+        <img
+          src="~/assets/img/gallery_img_2.png"
           alt="Photo of cats playing in a large space"
         />
       </div>
       <div class="inner-slide">
-        <nuxt-img
-          src="/gallery_img_3.png"
-          format="webp"
-          fit="cover"
+        <img
+          src="~/assets/img/gallery_img_3.png"
           alt="Photo of cats playing in a large space"
         />
       </div>
       <div class="inner-slide">
-        <nuxt-img
-          src="/gallery_img_1.png"
-          format="webp"
-          fit="cover"
+        <img
+          src="~/assets/img/gallery_img_1.png"
           alt="Photo of cats playing in a large space"
         />
       </div>
       <div class="inner-slide">
-        <nuxt-img
-          src="/gallery_img_2.png"
-          format="webp"
-          fit="cover"
+        <img
+          src="~/assets/img/gallery_img_2.png"
           alt="Photo of cats playing in a large space"
         />
       </div>
       <div class="inner-slide">
-        <nuxt-img
-          src="/gallery_img_3.png"
-          format="webp"
-          fit="cover"
+        <img
+          src="~/assets/img/gallery_img_3.png"
           alt="Photo of cats playing in a large space"
         />
       </div>
